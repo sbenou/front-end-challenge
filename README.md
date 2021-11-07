@@ -45,7 +45,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
    yes media queries have been addded and I use a UI Framework (ant design) which is responsive by default. The only landing page is responsive but we can follow the same process for new pages
 
 5. Is the logic well tested?
-   There is just one test for a card which is duplicated per property and one for the landing page, unfortunately I would need to psend more time buuilding tests but the minimum is there.
+   There is just one test for a card which is duplicated per property and one for the landing page, unfortunately I would need to spend more time building tests but the minimum is there.
 
 6. Is the application accessible to all users?
    there is no authentication system so accessible to all but not deployed in a cloud environment
