@@ -12,7 +12,11 @@ const statusStyle = {
   color: "white",
 };
 
-const StatusView: React.FC<{ isExpired: boolean }> = ({ isExpired }) => (
+type StatusProps = {
+  isExpired: boolean;
+};
+
+const StatusView: React.FC<StatusProps> = ({ isExpired }: StatusProps) => (
   <div
     style={{
       ...statusStyle,
