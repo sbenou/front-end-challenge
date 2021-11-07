@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Front End Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is using Ant design as UI framework (Ant Design simply for it's beautiful components) to display a list of properties as well as their data.
 
 ## Available Scripts
 
@@ -29,18 +29,34 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Technical notes
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Is the code easy to maintain?
+   it is separated in terms of structure and the components follow the same structure: we have sass files for each component, for each route there is a page. The app can be extended by adding routes which means adding new pages and each new page consist of components which are in their respective component file. each component can be made of other individual components and scss files. each time we add a new component we can follow the same structure.
+   Common scss file on the style folder, for specific components there is a scss file for component specific styles and generic styles can be overriden on that local scss file as well
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Does the proposed solution scale if more teams were to contribute?
+   same answer as above, since it is structured the team just need to follow the structure, if they want to change some convention to fit better with their need they can do it.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. How difficult is it to onboard another engineer to the codebase?
+   it is very easy to onboard a new engineer with such simple structure
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Does the application work across different screen sizes?
+   yes media queries have been addded and I use a UI Framework (ant design) which is responsive by default. The only landing page is responsive but we can follow the same process for new page
 
-## Learn More
+5. Is the logic well tested?
+   There is just one test for a card which is duplicated per property and one for the landing page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+6. Is the application accessible to all users?
+   there is no authentication system so accessible to all but not deployed in a cloud environment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+7. Is the code semantic?
+   yes, I did my best to do so. the code base and variable names are meaningful as well as the css, for example on the landing page, all the functions are component names relates to their actions and what they represent
+
+## Other considerations
+
+I deliberately decided not to use Json Server simply because it means adding an additional server suporting the backend which I could have done by installing node js but I preferred, for the time recommanded to allocate on this project, to spend my time on:
+
+- buiding the components
+- storing data in local storage
+- brinding a structure to the project

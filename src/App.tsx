@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
+import { isEmpty } from "lodash";
+import LandingPage from "./pages/Landing";
 
-function App() {
+const list = require("./mock.json").data;
+
+function App(): React.ReactElement {
+  useEffect(() => {
+    const propertyListData = localStorage.getItem("propertyListData");
+    if (isEmpty(propertyListData)) {
+      localStorage.setItem("propertyListData", JSON.stringify(list));
+    }
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/home" component={LandingPage} />
+        {/* Redirect when route not found */}
+        <Redirect to="/home" />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
