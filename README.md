@@ -34,6 +34,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 1. Is the code easy to maintain?
    The app is organized in folders. Folders, components and scss files follow the same structure: we have sass files for each component, for each route there is a page stored in the 'pages' folder. The app can be extended by adding routes which means adding new pages and each new page consist of components which are in their respective component file. Each component can be made of other individual components and scss files. each time we add a new component we can follow the same structure.
    There is a common scss file on the style folder, for specific components there is a scss file for component specific styles and generic styles can also be overriden on that local scss file as well.
+   On each component, i also test a card id to make sure the component is rendered and its data is loaded properly without errors.
 
 2. Does the proposed solution scale if more teams were to contribute?
    Partly same answer as above, since it is structured the team just need to follow the structure, if they want to change some convention to fit better with their needs they can obviously do it but definitely the app states would need to be stored on a reliable state management system such as redux for instance as it's complexity will definitely increment with adding new components and routes and functioanlities as well as backend apis.
