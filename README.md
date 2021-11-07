@@ -32,7 +32,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Technical notes
 
 1. Is the code easy to maintain?
-   The app is organized in folders. Folders, components and scss files follow the same structure: we have sass files for each component, for each route there is a page. The app can be extended by adding routes which means adding new pages and each new page consist of components which are in their respective component file. Each component can be made of other individual components and scss files. each time we add a new component we can follow the same structure.
+   The app is organized in folders. Folders, components and scss files follow the same structure: we have sass files for each component, for each route there is a page stored in the 'pages' folder. The app can be extended by adding routes which means adding new pages and each new page consist of components which are in their respective component file. Each component can be made of other individual components and scss files. each time we add a new component we can follow the same structure.
    There is a common scss file on the style folder, for specific components there is a scss file for component specific styles and generic styles can also be overriden on that local scss file as well.
 
 2. Does the proposed solution scale if more teams were to contribute?
