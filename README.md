@@ -51,7 +51,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
    there is no authentication system so accessible to all but not deployed in a cloud environment
 
 7. Is the code semantic?
-   yes, I did my best to do so. the code base and variable names are meaningful as well as the css, for example on the landing page, all the functions are component names relates to their actions and what they represent
+   yes, I did my best to do so. the code base and variable names are meaningful as well as the css, for example on the landing page, all the functions and component names relates to their actions and what they represent.
 
 ## Other considerations
 
