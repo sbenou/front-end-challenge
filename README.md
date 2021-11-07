@@ -55,8 +55,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Other considerations
 
-I deliberately decided not to use Json Server simply because it means adding an additional server suporting the backend which I could have done by installing node js but I preferred, for the time recommanded to allocate on this project, to spend my time on:
+I deliberately decided not to use Json Server simply because it means adding an additional server supporting the backend which I could have done by installing nodejs but I preferred, for the recommanded time to allocate on this project, to spend my time on:
 
 - buiding the components
+- adding mock data
 - storing data in local storage
 - brinding a structure to the project
