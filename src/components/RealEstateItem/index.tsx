@@ -15,7 +15,7 @@ type RealEstateItemProps = {
 const RealEstateItem: React.FC<RealEstateItemProps> = ({
   item,
   onClickSetToExpired,
-}) => (
+}: RealEstateItemProps) => (
   <div datatest-id="real-estate-item" className={styles.item_container}>
     <Image className={styles.bg_estate} src={item.image} alt="img" />
     <div className={styles.info_estate}>
