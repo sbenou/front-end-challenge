@@ -32,8 +32,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Technical notes
 
 1. Is the code easy to maintain?
-   it is separated in terms of structure and the components follow the same structure: we have sass files for each component, for each route there is a page. The app can be extended by adding routes which means adding new pages and each new page consist of components which are in their respective component file. each component can be made of other individual components and scss files. each time we add a new component we can follow the same structure.
-   Common scss file on the style folder, for specific components there is a scss file for component specific styles and generic styles can be overriden on that local scss file as well
+   The app is organized in folders the folders, components and scss files follow the same structure: we have sass files for each component, for each route there is a page. The app can be extended by adding routes which means adding new pages and each new page consist of components which are in their respective component file. Each component can be made of other individual components and scss files. each time we add a new component we can follow the same structure.
+   There is a common scss file on the style folder, for specific components there is a scss file for component specific styles and generic styles can also be overriden on that local scss file as well.
 
 2. Does the proposed solution scale if more teams were to contribute?
    Partly same answer as above, since it is structured the team just need to follow the structure, if they want to change some convention to fit better with their needs they can obviously do it but definitely the app states would need to be stored on a reliable state management system such as redux for instance as it's complexity will definitely increment with adding new components and routes and functioanlities as well as backend apis.
@@ -42,7 +42,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
    it is very easy to onboard a new engineer with such simple structure
 
 4. Does the application work across different screen sizes?
-   yes media queries have been addded and I use a UI Framework (ant design) which is responsive by default. The only landing page is responsive but we can follow the same process for new page
+   yes media queries have been addded and I use a UI Framework (ant design) which is responsive by default. The only landing page is responsive but we can follow the same process for new pages
 
 5. Is the logic well tested?
    There is just one test for a card which is duplicated per property and one for the landing page
