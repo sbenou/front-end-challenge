@@ -36,6 +36,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
    There is a common scss file on the style folder, for specific components there is a scss file for component specific styles and generic styles can also be overriden on that local scss file as well.
    On each component, i also test a card id to make sure the component is rendered and its data is loaded properly without errors.
 
+   security: obviously this is just a front end project, it is worthy to note that I just used isEmpty function from lodash to check if the local storage is empty but there are well known vulnerabilities on lodash such as the prototype polution as reported by Snyk.
+   <https://security.snyk.io/vuln/SNYK-JS-LODASH-450202>
+   a particular attention in checking libraries vulnerabilities is of high importance in projects!
+
 2. Does the proposed solution scale if more teams were to contribute?
    Partly same answer as above, since it is structured the team just need to follow the structure, if they want to change some convention to fit better with their needs they can obviously do it but definitely the app states would need to be stored on a reliable state management system such as redux for instance as it's complexity will definitely increment with adding new components and routes and functioanlities as well as backend apis.
 
