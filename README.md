@@ -33,7 +33,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 1. Is the code easy to maintain?
    The app is organized in folders. Folders, components and scss files follow the same structure: we have sass files for each component, for each route there is a page stored in the 'pages' folder. The app can be extended by adding routes which means adding new pages and each new page consist of components which are in their respective component file. Each component can be made of other individual components and scss files. each time we add a new component we can follow the same structure.
-   There is a common scss file on the style folder, for specific components there is a scss file for component specific styles and generic styles can also be overriden on that local scss file as well.
+   There is a common scss file on the style folder, for specific components there is a scss file for component specific styles and generic styles can also be overriden on that local scss file as well. By adding more components eventually we could create a subfolder for each component and move the 'types' folder from where it is and have such 'types' folder into each component folder.
    On each component, i also test a card id to make sure the component is rendered and its data is loaded properly without errors.
 
    security: obviously this is just a front end project, it is worthy to note that I just used isEmpty function from lodash to check if the local storage is empty but there are well known vulnerabilities on lodash such as the prototype polution as reported by Snyk.
