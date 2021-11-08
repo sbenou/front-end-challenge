@@ -41,7 +41,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
    a particular attention in checking libraries vulnerabilities is of high importance in projects!
 
 2. Does the proposed solution scale if more teams were to contribute?
-   Partly same answer as above, since it is structured the team just need to follow the structure, if they want to change some convention to fit better with their needs they can obviously do it but definitely the app states would need to be stored on a reliable state management system such as redux for instance as it's complexity will definitely increment with adding new components and routes and functioanlities as well as backend apis.
+   Partly same answer as above, since it is structured the team just need to follow the structure, if they want to change some convention to fit better with their needs they can obviously do it but definitely the app states would need to be stored on a reliable state management system such as redux for instance as it's complexity will definitely increment with adding new components and routes and functioanlities as well as backend apis. On top of that, to add properties, we would need to a form and a sophisticated automation process for agents to load new properties details (images, data, statuses, labels such as 'just added', 'bestvalue' etc...) and potentially using a headless CRM etc...
 
 3. How difficult is it to onboard another engineer to the codebase?
    it is very easy to onboard a new engineer with such simple structure
