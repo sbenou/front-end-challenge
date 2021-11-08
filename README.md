@@ -66,3 +66,5 @@ I deliberately decided not to use Json Server simply because it means adding an 
 - adding mock data
 - storing data in local storage
 - brinding a structure to the project
+
+Note: some libraries aren't the latest ones i.e react-router ... there are some changes i version 6.0: i.e redirect is no longe to be included in the switch statement and there are new items added such as 'element' so it needs me to spend time on the doc.
