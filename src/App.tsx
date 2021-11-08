@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { isEmpty } from "lodash";
 import LandingPage from "./pages/Landing";
+import NotFound from "./pages/NotFound/index";
 
 const list = require("./mock.json").data;
 
@@ -18,7 +19,7 @@ function App(): React.ReactElement {
       <Routes>
         <Route path="/home" element={<LandingPage />} />
         {/* Redirect when route not found */}
-        <Route path="*" element={<Navigate to="/home" />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
