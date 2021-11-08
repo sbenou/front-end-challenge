@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
+import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import { isEmpty } from "lodash";
 import LandingPage from "./pages/Landing";
 
@@ -15,11 +15,11 @@ function App(): React.ReactElement {
 
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/home" component={LandingPage} />
+      <Routes>
+        <Route path="/home" element={<LandingPage />} />
         {/* Redirect when route not found */}
-        <Redirect to="/home" />
-      </Switch>
+        <Route path="*" element={<Navigate to="/home" />} />
+      </Routes>
     </BrowserRouter>
   );
 }
