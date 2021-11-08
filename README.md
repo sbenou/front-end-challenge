@@ -57,6 +57,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 7. Is the code semantic?
    yes, I did my best to do so. the code base and variable names are meaningful as well as the css, for example on the landing page, all the functions and component names relates to their actions and what they represent.
+   We could potentially used polymorphic components to bring more flexibility in the case of adding more components and functionalities to make it more semantic.
 
 ## Other considerations
 
