@@ -20,8 +20,8 @@ function App(): React.ReactElement {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage />} />
           {/* Redirect when route not found */}
           <Route path="*" element={<NotFound />} />
         </Routes>
