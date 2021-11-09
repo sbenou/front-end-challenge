@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
+import { QueryClientProvider, QueryClient } from "react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { isEmpty } from "lodash";
-import LandingPage from "./pages/Landing";
-import NotFound from "./pages/NotFound/index";
+import LandingPage from "./pages/Landing/Landing.page";
+import NotFound from "./pages/NotFound/NotFound.page";
 
 const list = require("./mock.json").data;
+const queryClient = new QueryClient();
 
 function App(): React.ReactElement {
   useEffect(() => {
@@ -15,13 +17,16 @@ function App(): React.ReactElement {
   });
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        {/* Redirect when route not found */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<LandingPage />} />
+          {/* Redirect when route not found */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 

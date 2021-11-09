@@ -1,6 +1,6 @@
 import "../../constants/matchMedia";
 import { render, screen } from "@testing-library/react";
-import RealEstateItem from "./index";
+import RealEstateItem from "./RealEstate.page";
 import { MemoryRouter } from "react-router-dom";
 
 const mockItem = {

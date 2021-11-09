@@ -16,7 +16,7 @@ function NotFound(): React.ReactElement {
       </Row>
       <Divider orientation="left"></Divider>
       <Row>
-        <Button type="primary" onClick={handleClick}>
+        <Button id="base" type="primary" onClick={handleClick}>
           Home
         </Button>
       </Row>

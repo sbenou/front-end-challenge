@@ -1,7 +1,6 @@
 import "../../constants/matchMedia";
-import React from "react";
 import { render, screen } from "@testing-library/react";
-import Landing from "./index";
+import Landing from "./Landing.page";
 import { MemoryRouter } from "react-router-dom";
 
 describe("Landing page", () => {

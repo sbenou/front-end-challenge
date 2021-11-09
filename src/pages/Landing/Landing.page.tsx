@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "antd/dist/antd.css";
 import { List, Row, Select } from "antd";
-import RealEstateItem from "../../components/RealEstateItem";
+import RealEstateItem from "../../components/RealEstateItem/RealEstate.page";
 import { RealEstateItemType } from "../../types/LandingPageType";
 
 const { Option } = Select;
